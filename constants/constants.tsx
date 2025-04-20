@@ -1,3 +1,5 @@
+import { Product } from "@/types/types"
+
 export const slides = [
     {
         image: '/bg-1.jpg',
@@ -47,7 +49,7 @@ export const navlinks = [
         path: '/'
     },
     {
-        name: 'Categories',
+        name: 'Products',
         path: '/'
     },
     {
@@ -95,3 +97,97 @@ export const farm = [
         image: '/farmer-5.jpg',
     },
 ]
+
+export const products: Product[] = [
+    {
+        id: 1,
+        name: "Rice",
+        image: "/Rice.jpg",
+        price: " ₦16,000 / 1painter",
+        seller: "AGROX"
+    },
+    {
+        id: 2,
+        name: "Eggs",
+        image: "/Eggs.jpg",
+        price: " ₦8000 / 1crate",
+        seller: "AGROX"
+    },
+    {
+        id: 3,
+        name: "Cocoa",
+        image: "/Cocoa.jpg",
+        price: " ₦ 2000 / 1painter",
+        seller: "AGROX"
+    },
+    {
+        id: 4,
+        name: "Coffee",
+        image: "/Coffe.jpg",
+        price: " ₦ 2000 / 1painter ",
+        seller: "AGROX"
+    },
+    {
+        id: 5,
+        name: "Maize",
+        image: "/Maize.jpg",
+        price: " ₦ 10000 / 1bag ",
+        seller: "AGROX"
+    },
+    {
+        id: 6,
+        name: "Beans",
+        image: "/Beans.jpg",
+        price: "  ₦ 40000 / 1bag ",
+        seller: "AGROX"
+    },
+    {
+        id: 7,
+        name: "Irish Potatoes",
+        image: "/Irish-potatoes.jpg",
+        price: "  ₦ 8000 / 1painter ",
+        seller: "AGROX"
+    },
+    {
+        id: 8,
+        name: "Potatoes",
+        image: "/Sweet-potatoes.jpg",
+        price: " ₦ 8000 / 1painter ",
+        seller: "AGROX"
+    },
+]
+
+export const farmers = [
+    {
+        id: 1,
+        name: "Esther Onyewuchukwu",
+        country: "Nigeria",
+        product: "CatFish Rearing",
+        image: "",
+        Bio: ""
+    },
+    {
+        id: 2,
+        name: "Jubril Hamza",
+        country: "Ghana",
+        product: "Vegetables",
+        image: "",
+        Bio: ""
+    },
+    {
+        id: 3,
+        name: "Rapheal Mick",
+        country: "Nigeria",
+        product: "Rice Farming",
+        image: "",
+        Bio: ""
+    },
+    {
+        id: 4,
+        name: "Victor Chukwu",
+        country: "Nigeria",
+        product: "Poultry",
+        image: "",
+        Bio: ""
+    },
+] 

@@ -57,8 +57,8 @@ export default function About() {
                         {farm.map((img, index) => (
                             <SwiperSlide key={index}>
                                 <motion.div
-                                    initial={{ scale: 1.1, opacity: 0 }}
-                                    animate={{ scale: 1, opacity: 200 }}
+                                    initial={{ scale: 1.1, opacity: 100 }}
+                                    animate={{ scale: 1, opacity: 0 }}
                                     transition={{
                                         duration: 10000,
                                     }}
