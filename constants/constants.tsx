@@ -1,4 +1,4 @@
-import { Product } from "@/types/types"
+import { Farmer, Product, Testimonial } from "@/types/types"
 
 export const slides = [
     {
@@ -49,7 +49,7 @@ export const navlinks = [
         path: '/'
     },
     {
-        name: 'Products',
+        name: 'Meet Our Farmers',
         path: '/'
     },
     {
@@ -157,37 +157,64 @@ export const products: Product[] = [
     },
 ]
 
-export const farmers = [
+export const farmers: Farmer[] = [
     {
         id: 1,
         name: "Esther Onyewuchukwu",
-        country: "Nigeria",
-        product: "CatFish Rearing",
-        image: "",
+        location: "Nigeria",
+        products: ["CatFish Rearing ", "Vegatables"],
+        image: "/Esther.jpg",
         Bio: ""
     },
     {
         id: 2,
         name: "Jubril Hamza",
-        country: "Ghana",
-        product: "Vegetables",
-        image: "",
+        location: "Ghana",
+        products: ["Vegetables ", "Livestock"],
+        image: "/Jubril.jpg",
         Bio: ""
     },
     {
         id: 3,
         name: "Rapheal Mick",
-        country: "Nigeria",
-        product: "Rice Farming",
-        image: "",
+        location: "Nigeria",
+        products: ["Rice Farming ", "Beans ", "Cash crops"],
+        image: "/Raph.jpg",
         Bio: ""
     },
     {
         id: 4,
         name: "Victor Chukwu",
-        country: "Nigeria",
-        product: "Poultry",
-        image: "",
+        location: "Nigeria",
+        products: ["Poultry ", "Coffee"],
+        image: "/Victory.jpg",
         Bio: ""
     },
-] 
+]
+
+export const testimonials: Testimonial[] = [
+    {
+        name: "Amaka Obi",
+        role: "Cassava Farmer, Nigeria",
+        quote: "AGROX helped me find reliable buyers and better pricing. It's changed my farming business.",
+        image: "/woman.jpg"
+    },
+    {
+        name: "John Mensah",
+        role: "Cocoa Exporter, Ghana",
+        quote: "Connecting with international buyers has never been easier — AGROX makes it seamless.",
+        image: "/man-1.jpg"
+    },
+    {
+        name: "Fatou Diallo",
+        role: "Vegetable Farmer, Senegal",
+        quote: "I love the support and the simplicity of the platform. AGROX has my trust.",
+        image: "/man-2.jpg"
+    },
+    {
+        name: "Micheal Okwu",
+        role: "Rice Farmer, Nigeria",
+        quote: "I love the support and the simplicity of the platform. AGROX has my trust.",
+        image: "/man-3.jpg"
+    }
+]

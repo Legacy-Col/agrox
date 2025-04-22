@@ -19,7 +19,7 @@ export default function NavBar() {
                         </Link>
                     ))}
                 </nav>
-                <div className="flex gap-6">
+                <div className="gap-6 hidden md:flex">
                     <BellAlertIcon
                         height={20}
                         width={20} />
