@@ -8,17 +8,18 @@ import Image from "next/image";
 
 export default function Testimonials() {
     return (
-        <section className="w-full px-8 py-10 bg-gradient-to-b from-green-900 to-green-800 text-white">
+        <section className="w-full px-4 md:px-8 py-16 bg-gradient-to-b from-green-900 to-green-800 text-white relative">
             <div className="max-w-6xl mx-auto text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
+                    className="font-serif text-2xl sm:text-3xl md:text-4xl tracking-wide"
                 >
                     <h1 className="font-serif text-3xl">❤️ What Our Farmers Are Saying</h1>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10 w-full text-neutral-900">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xs:grid-cols-4 gap-8 mt-12 text-neutral-900">
                     {testimonials.map((testimonial: Testimonial, index: number) => (
                         <motion.div
                             key={index}
@@ -35,9 +36,9 @@ export default function Testimonials() {
                                 height={80}
                                 className="rounded-full mb-4 mx-auto shadow-lg shadow-neutral-900"
                             />
-                            <p className="text-lg italic mb-4">“{testimonial.quote}”</p>
-                            <div className="font-semibold text-green-400">{testimonial.name}</div>
-                            <div className="text-sm text-neutral-800">{testimonial.role}</div>
+                            <p className="text-base md:text-lg text-center italic mb-4">“{testimonial.quote}”</p>
+                            <div className="font-semibold text-green-400 text-center">{testimonial.name}</div>
+                            <div className="text-sm text-neutral-800 text-center">{testimonial.role}</div>
                         </motion.div>
                     ))}
                 </div>
@@ -45,3 +46,5 @@ export default function Testimonials() {
         </section>
     )
 }
+
+

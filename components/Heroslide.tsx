@@ -25,7 +25,7 @@ export default function HeroSlider() {
         delaySpeed: 2000
     })
     return (
-        <section className="relative h-screen">
+        <section className="relative md:h-screen h-[90vh] overflow-hidden">
             <Swiper
                 modules={[Autoplay, Pagination, EffectFade]}
                 autoplay={{ delay: 20000, disableOnInteraction: false }}
@@ -41,7 +41,7 @@ export default function HeroSlider() {
                             style={{ backgroundImage: `url(${slide.image})` }}
                         >
                             <div className=" absolute bg-black opacity-60 inset-0">
-                                <div className="relative z-10 mt-34 text-white ">
+                                <div className="relative z-10 md:mt-34 mt-4 text-white max-w-6xl md:max-w-full mx-auto flex items-center flex-col md:flex-row">
                                     <motion.div
                                         initial={{ opacity: 0, y: 50 }}
                                         animate={{ opacity: 1, y: 0 }}
@@ -53,24 +53,25 @@ export default function HeroSlider() {
                                             dampness: 40,
                                             mass: 1,
                                         }}
-                                        className="px-10 gap-4">
-                                        <h1 className="text-6xl tracking-widest mb-4">WELCOME TO AGROX!</h1>
-                                        <span className="text-2xl flex text-justify text-white">"At AGROX, we bridge the gap between farmers and buyers, <br /> Offering innovative solutions to simplify connections, <br /> Fostering growth, and building a sustainable future for agriculture." </span>
-                                        <p className="text-4xl font-serif my-4">{text}
+                                        className="md:px-10 px-6 gap-4">
+                                        <h1 className="md:text-6xl text-4xl text-center md:block tracking-widest mb-4">WELCOME TO AGROX!</h1>
+                                        <span className="text-md md:text-lg flex text-white">"At AGROX, we bridge the gap between farmers and buyers, <br /> Offering innovative solutions to simplify connections, <br /> Fostering growth, and building a sustainable future for agriculture." </span>
+                                        <p className="md:text-4xl text-xl font-serif my-4">{text}
                                             <span className="animate-bounce"> |</span>
                                         </p>
+                                        <div className="w-full max-w-xl mt-6 mb-6 flex justify-center ">
+                                            <input
+                                                placeholder="Search Products..."
+                                                type="text"
+                                                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-black md:p-4 p-2 rounded-full w-2/3 shadow-lg shadow-gray-100 focus:outline-none focus:ring-2 focus:ring-green-500 md:mt-56 mt-56 lg:mt-48"
+                                                style={{ zIndex: 1000 }}
+                                            />
+                                        </div>
 
-                                        <input
-                                            placeholder="Search Products..."
-                                            type="text"
-                                            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-black p-4 rounded-full w-2/3 shadow-lg shadow-gray-100 focus:outline-none focus:ring-2 focus:ring-green-500 mt-48"
-                                            style={{ zIndex: 1000 }}
-                                        />
+                                        <div className="space-x-4 mt-4 mb-8 md:mb-6 md:gap-6 flex flex-row flex-1">
+                                            <Button className="bg-green-950 shadow-lg shadow-neutral-400 hover:bg-neutral-700 font-serif border cursor-pointer ">Join as Farmer</Button>
 
-                                        <div className="space-x-4 mt-4 mb-6">
-                                            <Button className="bg-green-950 shadow-lg shadow-neutral-400 hover:bg-neutral-700 font-serif border cursor-pointer">Join as Farmer</Button>
-
-                                            <Button className="font-serif bg-neutral-700 hover:bg-green-950 shadow-lg shadow-neutral-400 border cursor-pointer">Browse Marketplace</Button>
+                                            <Button className="font-serif bg-neutral-700 hover:bg-green-950 shadow-lg shadow-neutral-400 border cursor-pointer ">Browse Marketplace</Button>
                                         </div>
                                     </motion.div>
                                 </div>

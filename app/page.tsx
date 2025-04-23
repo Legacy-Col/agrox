@@ -6,7 +6,7 @@ import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
-    <section>
+    <section className="">
       <div>
         <HeroSlide />
         <About />

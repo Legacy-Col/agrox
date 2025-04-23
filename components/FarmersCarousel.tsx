@@ -15,8 +15,8 @@ export default function FarmersCarousel() {
         setFarmers(farmData)
     }, [])
     return (
-        <section className="relative md:hidden w-full h-fit py-8 px-8">
-            <h2 className="text-center font-serif mb-6 text bg-zinc-200 text-3xl">
+        <section className="">
+            <h2 className="text-center font-serif mb-6 text bg-zinc-200 text-2xl md:text-4xl py-2 rounded-xl shadow">
                 🌾 Meet Our Farmers
             </h2>
 
@@ -24,7 +24,7 @@ export default function FarmersCarousel() {
                 whileTap={{ cursor: "grabbing" }}
                 drag="x"
                 dragConstraints={{ right: 0, left: 0 }}
-                className="flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory"
+                className="flex gap-6 overflow-x-auto md:hidden scrollbar-hide snap-x snap-mandatory"
             >
 
                 {farmers.map((farmer) => (

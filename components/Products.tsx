@@ -9,7 +9,7 @@ import { ShoppingCartIcon } from "@heroicons/react/16/solid";
 export default function Products() {
     return (
         <section
-            className="relative min-h-screen py-16 px-4 lg:px-20 bg-cover bg-center"
+            className="relative min-h-screen py-16 px-4 md:px-10 lg:px-20 bg-cover bg-center"
             style={{
                 backgroundImage: `url('/crop-field.jpg')`,
             }}
@@ -17,13 +17,13 @@ export default function Products() {
             <div className="absolute z-0 bg-black opacity-80 inset-0"></div>
 
             <div className="relative z-10">
-                <h1 className="font-serif text-white my-10 text-center text-6xl">
+                <h1 className="font-serif text-white my-5 md:my-10 text-center text-3xl md:text-sxl ;g:text-6xl">
                     🌿 Featured Products
                 </h1>
 
-                <div className="grid grid-cols-3 gap-6 px-4 md:px-10">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     {/* Left side: 4x4 product grid */}
-                    <div className="col-span-2 grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-6">
+                    <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                         {products.map((product) => (
                             <motion.div
                                 key={product.id}
