@@ -25,7 +25,8 @@ export interface Testimonial {
 }
 
 export const userSchema = z.object({
-    name: z.string().min(3),
+    firstName: z.string().min(3),
+    lastName: z.string().min(3),
     email: z.string().email("Invalid Email"),
     password: z.string().min(6, "Passsword must contain at least six characters"),
     country: z.string().min(6),
