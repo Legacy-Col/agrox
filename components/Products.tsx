@@ -9,7 +9,7 @@ import { ShoppingCartIcon } from "@heroicons/react/16/solid";
 export default function Products() {
     return (
         <section
-            className="relative min-h-screen py-16 px-4 md:px-10 lg:px-20 bg-cover bg-center"
+            className="relative min-h-screen py-16 px-4 md:px-20 lg:px-20 bg-cover bg-center"
             style={{
                 backgroundImage: `url('/crop-field.jpg')`,
             }}
